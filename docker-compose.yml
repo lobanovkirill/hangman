@@ -1,0 +1,9 @@
+services:
+  php-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hangman-php-cli
+    command: sh -c "composer install"
+    volumes:
+      - ./app:/app
