@@ -14,7 +14,7 @@ final readonly class Game
         private GamePlay $score,
         private Hangman  $hangman,
         private Display  $display,
-        private Language $dictionary,
+        private Language $language,
     )
     {
     }
@@ -48,7 +48,7 @@ final readonly class Game
                     break;
                 }
 
-                $input = new Input(dictionary: $this->dictionary, character: $input);
+                $input = new Input(dictionary: $this->language, character: $input);
 
                 if ($this->score->isUsed(character: $input->character)) {
                     Output::write('⚠️ Вы уже ранее вводили данную букву!');

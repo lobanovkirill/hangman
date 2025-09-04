@@ -47,7 +47,7 @@ while (!$isStop) {
                     score: new GamePlay(),
                     hangman: new Hangman(),
                     display: new Display(),
-                    dictionary: $language
+                    language: $language
             )->run();
 
         } catch (\InvalidArgumentException $e) {
