@@ -48,7 +48,7 @@ final readonly class Game
                     break;
                 }
 
-                $input = new Input(dictionary: $this->language, character: $input);
+                $input = new Input(language: $this->language, character: $input);
 
                 if ($this->score->isUsed(character: $input->character)) {
                     Output::write('⚠️ Вы уже ранее вводили данную букву!');
